@@ -1,10 +1,5 @@
 # HousePricePrediction
 
-region_freq
-geo_cluster
-total_pets
-lat
-total_pets
-has_offer
-has_appliances
-has_outdoor
+Attempt 1
+"n_estimators": [50, 100, 200],
+"max_features" : [1, 2, 4, 6]
