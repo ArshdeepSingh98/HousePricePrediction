@@ -1,0 +1,34 @@
+Model Performance Report - Price Prediction
+
+Dataset: train_set.csv
+Date: 2025-02-15
+Target Variable: price
+
+Linear Regression Performance:
+- Mean Absolute Error (MAE): 276.5598
+- Mean Squared Error (MSE): 0.0936
+- R² Score: 0.4526
+
+Random Forest Regressor Performance:
+- R² Score: 0.8252
+- Mean Absolute Error (MAE): $115.20
+- Mean Squared Error (MSE): 57591.04
+- Root Mean Squared Error (RMSE): $239.98
+
+XGBoost Regressor Performance:
+- R² Score: 0.7689
+- Mean Absolute Error (MAE): $169.61
+- Mean Squared Error (MSE): 76130.66
+- Root Mean Squared Error (RMSE): $275.92
+
+
+Model Ranking Based on R² Score:
+- Random Forest Regressor (0.8252)
+- XGBoost Regressor (0.7689)
+- Linear Regression (0.4526)
+
+Key Observations:
+- Random Forest performed best, achieving the highest R² score (0.8252) with the lowest MAE and RMSE.
+- XGBoost had strong performance but slightly lower than Random Forest.
+- Linear Regression underperformed, indicating non-linearity in the data.
+- Further hyperparameter tuning may improve XGBoost performance.
