@@ -2,11 +2,11 @@
 
 ## Real Estate Price Prediction
 
-## 1. Summary
+## Summary
 
 This project aims to develop a machine learning model that accurately predicts real estate prices based on various features such as location, size, and amenities. By analyzing historical data, the model provides insights into property valuation, assisting stakeholders in making informed decisions.
 
-## 2. Installation Steps
+## Installation Steps
 
 To set up the project locally, follow these steps:
 
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 4. Place the Dataset:
 
-## 3. File Folder Explanation
+## File Folder Explanation
 
 - `data/`: Dataset is present in this folder, which has 3 subfolders namely
 
@@ -47,7 +47,27 @@ pip install -r requirements.txt
 - `model/`: This folder contains the saved final model for this project
 - `requirements.txt`: List of dependencies
 
-## 4. Pipeline Parts
+## How to Run Pipeline
+
+### Step1: Run feature engineering
+
+```bash
+python scripts/run_preprocessing.py
+```
+
+### Step2:Train the model
+
+```bash
+python scripts/run_training.py
+```
+
+### Step3:Evaluate the model
+
+```bash
+python scripts/run_evaluation.py
+```
+
+## Pipeline Parts
 
 The project pipeline consists of the following parts:
 
@@ -77,7 +97,7 @@ The project pipeline consists of the following parts:
    - Tune the hyperparameters using Cross Validation for best results
    - Save the best-performing model to models/.
 
-## 5. Results
+## Results
 
 The Random Forest model demonstrated superior performance in predicting the prices:
 
