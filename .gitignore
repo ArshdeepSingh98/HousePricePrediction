@@ -3,4 +3,5 @@ test_set
 .ipynb_checkpoints
 data/raw/*.csv
 data/processed/*.csv
+data/interim/*.csv
 models/*.pkl

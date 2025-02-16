@@ -7,4 +7,3 @@ scikit-learn
 xgboost
 wordcloud
 scipy
-catboost
