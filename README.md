@@ -53,28 +53,29 @@ The project pipeline consists of the following parts:
 
 1. Data Ingestion (01_data_ingestion.ipynb):
 
-   Load the raw dataset.
+   - Load the raw dataset.
 
 2. Exploratory Data Analysis (EDA) (02_EDA.ipynb):
 
-   Handle missing values and data types.
-   Analyze data distributions and relationships.
-   Visualize key features and their correlations.
-   Identify patterns and outliers.
-   Save the intermediate data both scaled and unscaled to data/interim/.
+   - Handle missing values and data types.
+   - Analyze data distributions and relationships.
+   - Visualize key features and their correlations.
+   - Identify patterns and outliers.
+   - Save the intermediate data both scaled and unscaled to data/interim/.
 
 3. Feature Engineering (03_feature_engineering.ipynb):
-   Create new features from existing data.
-   Encode categorical variables.
-   Scale numerical features.
-   Save the cleaned and transformed data to data/processed/ for modeling.
+
+   - Create new features from existing data.
+   - Encode categorical variables.
+   - Scale numerical features.
+   - Save the cleaned and transformed data to data/processed/ for modeling.
 
 4. Model Training (04_model_training.ipynb):
 
-   Train machine learning models (e.g., Linear Regression, Random Forest, XGBoost).
-   Evaluate model performance using metrics like MAE, MSE, and R².
-   Tune the hyperparameters using Cross Validation for best results
-   Save the best-performing model to models/.
+   - Train machine learning models (e.g., Linear Regression, Random Forest, XGBoost).
+   - Evaluate model performance using metrics like MAE, MSE, and R².
+   - Tune the hyperparameters using Cross Validation for best results
+   - Save the best-performing model to models/.
 
 ## 5. Results
 
