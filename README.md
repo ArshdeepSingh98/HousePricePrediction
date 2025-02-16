@@ -31,7 +31,7 @@ pip install -r requirements.txt
 - `data/`: Dataset is present in this folder, which has 3 subfolders namely
 
   - `data/raw`: It contains raw intial train and test csv files
-  - `data/processed`: It contains cleaned final csv to be used for training and building models
+  - `data/processed`: It contains cleaned final train and test (both scaled and unscaled) csv to be used for training and building models
   - `data/interim`: It contains intermediate csv files between pipeline steps
 
 - `notebooks/`: All Jupyter notebooks that are used in this project are present in this
@@ -76,4 +76,18 @@ The project pipeline consists of the following parts:
    Tune the hyperparameters using Cross Validation for best results
    Save the best-performing model to models/.
 
-5.
+## 5. Results
+
+The Random Forest model demonstrated superior performance in predicting the prices:
+
+- Mean Absolute Error (MAE): $115.20
+- Mean Squared Error (MSE): 57,591.04
+- Root Mean Squared Error (RMSE): $239.98
+- R² Score: 0.8252
+
+These metrics indicate that Random Forest model predicted property prices more accurately as compared to other models.
+
+## Submission details
+
+- Arshdeep Singh
+- asroideva@gmail.com
