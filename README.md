@@ -28,13 +28,13 @@ pip install -r requirements.txt
 
 ## 3. File Folder Explanation
 
-- data: Dataset is present in this folder, which has 3 subfolders namely
+- `data/`: Dataset is present in this folder, which has 3 subfolders namely
 
-  - Raw: It contains raw intial train and test csv files
-  - Processed: It contains cleaned final csv to be used for training and building models
-  - Interim: It contains intermediate csv files between pipeline steps
+  - `data/raw`: It contains raw intial train and test csv files
+  - `data/processed`: It contains cleaned final csv to be used for training and building models
+  - `data/interim`: It contains intermediate csv files between pipeline steps
 
-- notebooks: All Jupyter notebooks that are used in this project are present in this
+- `notebooks/`: All Jupyter notebooks that are used in this project are present in this
 
   - 01_data_ingestion.ipynb: 1st Step, containing the ingestion code
   - 02_EDA.ipynb: 2nd Step, containing the Exploratory Data Analysis code
@@ -42,41 +42,38 @@ pip install -r requirements.txt
   - 04_model_training_and_inference.ipynb: Last step, containing the model training, hyper-parameter tuning, and inference code
   - Complete_all_steps_one_file.ipynb: All in one steps notebook
 
-- pdf: This folder contains the pdf of all steps in one file
-- reports: This folder contains the model's evaluation scores, as well as a summary file
-- model: This folder contains the saved final model for this project
+- `pdf/`: This folder contains the pdf of all steps in one file
+- `reports/`: This folder contains the model's evaluation scores, as well as a summary file
+- `model/`: This folder contains the saved final model for this project
+- `requirements.txt`: List of dependencies
 
-<!--
-4.  Data Preprocessing
+## 4. Pipeline Parts
 
-    Handle missing values (e.g., imputation).
-    Convert categorical features to numerical (one-hot encoding, label encoding).
-    Normalize or standardize numerical features.
-    Remove outliers.
+The project pipeline consists of the following parts:
 
-5.  Feature Engineering
+1. Data Ingestion (01_data_ingestion.ipynb):
 
-    Create new relevant features (e.g., price per square foot).
-    Perform dimensionality reduction if needed.
+   Load the raw dataset.
 
-6.  Data Splitting
+2. Exploratory Data Analysis (EDA) (02_EDA.ipynb):
 
-    Split data into training, validation, and test sets (e.g., 70%-15%-15%).
+   Handle missing values and data types.
+   Analyze data distributions and relationships.
+   Visualize key features and their correlations.
+   Identify patterns and outliers.
+   Save the intermediate data both scaled and unscaled to data/interim/.
 
-7.  Model Selection
+3. Feature Engineering (03_feature_engineering.ipynb):
+   Create new features from existing data.
+   Encode categorical variables.
+   Scale numerical features.
+   Save the cleaned and transformed data to data/processed/ for modeling.
 
-    Choose models like Linear Regression, Decision Trees, Random Forest, Gradient Boosting (XGBoost, LightGBM), or Neural Networks.
+4. Model Training (04_model_training.ipynb):
 
-8.  Model Training
+   Train machine learning models (e.g., Linear Regression, Random Forest, XGBoost).
+   Evaluate model performance using metrics like MAE, MSE, and R².
+   Tune the hyperparameters using Cross Validation for best results
+   Save the best-performing model to models/.
 
-    Train models using the training data.
-    Use hyperparameter tuning (Grid Search, Random Search, Bayesian Optimization).
-
-9.  Model Evaluation
-
-    Evaluate models using metrics like RMSE, MAE, and R².
-
-10. Model Deployment
-
-    Save the trained model (pickle, joblib, or TensorFlow format).
-    Deploy using Flask, FastAPI, or a cloud service (AWS, GCP, Azure). -->
+5.
